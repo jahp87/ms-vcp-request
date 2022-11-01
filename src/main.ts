@@ -12,8 +12,8 @@ async function bootstrap() {
   }
 
   const configSwagger = new DocumentBuilder()
-    .setTitle('Microservice catalog')
-    .setDescription('Swagger for ms-vcp-catalog API')
+    .setTitle('Microservice request')
+    .setDescription('Swagger for ms-vcp-request API')
     .setVersion('1.0')
     .addTag('providers')
 
