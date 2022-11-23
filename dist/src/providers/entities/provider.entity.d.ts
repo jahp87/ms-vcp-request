@@ -1,9 +1,8 @@
 export declare class ProviderEntity {
-    id: number;
-    taxId: string;
-    names: string;
-    fatherLastname: string;
-    motherLastname: string;
+    id?: number;
+    company: string;
+    firstName: string;
+    lastName: string;
     businessName: string;
     email: string;
 }

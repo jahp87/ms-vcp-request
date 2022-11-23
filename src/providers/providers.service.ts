@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ProviderDto } from './dto/provider.dto';
+import { ProviderDto, UpdateProviderDto } from './dto/provider.dto';
 import { ProviderEntity } from './entities/provider.entity';
 import { ProviderRepository } from './repositories/provider.repository';
 
@@ -25,7 +25,7 @@ export class ProvidersService {
 
   async update(
     id: number,
-    _updateProviderDto: ProviderDto,
+    _updateProviderDto: UpdateProviderDto,
   ): Promise<ProviderEntity> {
     const updateProvider = await this.providerRepository.update(
       id,

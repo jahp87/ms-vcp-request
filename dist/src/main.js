@@ -12,10 +12,10 @@ async function bootstrap() {
         app.enableCors();
     }
     const configSwagger = new swagger_1.DocumentBuilder()
-        .setTitle('Microservice request')
-        .setDescription('Swagger for ms-vcp-request API')
+        .setTitle('Microservice catalog')
+        .setDescription('Swagger for ms-vcp-catalog API')
         .setVersion('1.0')
-        .addTag('providers')
+        .addTag('requesst')
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, configSwagger);
     swagger_1.SwaggerModule.setup('swagger', app, document);

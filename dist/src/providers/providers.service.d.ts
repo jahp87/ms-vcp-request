@@ -1,4 +1,4 @@
-import { ProviderDto } from './dto/provider.dto';
+import { ProviderDto, UpdateProviderDto } from './dto/provider.dto';
 import { ProviderEntity } from './entities/provider.entity';
 import { ProviderRepository } from './repositories/provider.repository';
 export declare class ProvidersService {
@@ -7,6 +7,6 @@ export declare class ProvidersService {
     create(providerDto: ProviderDto): Promise<ProviderEntity>;
     findAll(): Promise<ProviderEntity[]>;
     findOne(id: number): Promise<ProviderEntity>;
-    update(id: number, _updateProviderDto: ProviderDto): Promise<ProviderEntity>;
+    update(id: number, _updateProviderDto: UpdateProviderDto): Promise<ProviderEntity>;
     remove(id: number): Promise<void>;
 }

@@ -20,8 +20,8 @@ export class ProviderRepository {
     return this.providerRepository.findOneBy({ id });
   }
 
-  async create(providerDto: ProviderDto): Promise<ProviderEntity> {
-    return await this.providerRepository.save(providerDto);
+  create(providerDto: ProviderDto): Promise<ProviderEntity> {
+    return this.providerRepository.save(providerDto);
   }
 
   async update(id: number, providerDto: ProviderDto) {
@@ -33,4 +33,3 @@ export class ProviderRepository {
     return this.providerRepository.delete(id);
   }
 }
-

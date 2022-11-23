@@ -1,20 +1,17 @@
-import { ApiProperty } from '@nestjs/swagger';
+import { ApiProperty, OmitType } from '@nestjs/swagger';
 
 export class ProviderDto {
   @ApiProperty()
-  id: number;
+  id?: number;
 
   @ApiProperty()
-  taxId: string;
+  company: string;
 
   @ApiProperty()
-  names: string;
+  firstName: string;
 
   @ApiProperty()
-  fatherLastname: string;
-
-  @ApiProperty()
-  motherLastname: string;
+  lastName: string;
 
   @ApiProperty()
   businessName: string;
@@ -22,3 +19,5 @@ export class ProviderDto {
   @ApiProperty()
   email: string;
 }
+
+export class UpdateProviderDto extends OmitType(ProviderDto, ['id'] as const) {}

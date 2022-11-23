@@ -27,8 +27,8 @@ let ProviderRepository = class ProviderRepository {
     findOne(id) {
         return this.providerRepository.findOneBy({ id });
     }
-    async create(providerDto) {
-        return await this.providerRepository.save(providerDto);
+    create(providerDto) {
+        return this.providerRepository.save(providerDto);
     }
     async update(id, providerDto) {
         await this.providerRepository.update(id, providerDto);

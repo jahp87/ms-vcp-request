@@ -1,11 +1,6 @@
-import { DataSource } from 'typeorm';
-import { ConfigService } from '@nestjs/config';
-import { config } from 'dotenv';
 import { ProviderEntity } from './src/providers/entities/provider.entity';
-
-config();
-
-const configService = new ConfigService();
+import { DataSource } from 'typeorm';
+import { RequestEntity } from './src/requests/entities/request.entity';
 
 export default new DataSource({
   type: 'postgres',
@@ -14,7 +9,7 @@ export default new DataSource({
   username: 'postgres',
   password: 'jahp',
   database: 'dbvcp',
-  entities: [ProviderEntity],
+  entities: [RequestEntity, ProviderEntity],
   synchronize: true,
   migrations: ['./migrations/*.ts'],
 });

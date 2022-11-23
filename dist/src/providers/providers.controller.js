@@ -16,7 +16,6 @@ exports.ProvidersController = void 0;
 const common_1 = require("@nestjs/common");
 const providers_service_1 = require("./providers.service");
 const provider_dto_1 = require("./dto/provider.dto");
-const swagger_1 = require("@nestjs/swagger");
 let ProvidersController = class ProvidersController {
     constructor(providersService) {
         this.providersService = providersService;
@@ -62,7 +61,7 @@ __decorate([
     __param(0, (0, common_1.Param)('id')),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, provider_dto_1.ProviderDto]),
+    __metadata("design:paramtypes", [String, provider_dto_1.UpdateProviderDto]),
     __metadata("design:returntype", void 0)
 ], ProvidersController.prototype, "update", null);
 __decorate([
@@ -73,7 +72,6 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], ProvidersController.prototype, "remove", null);
 ProvidersController = __decorate([
-    (0, swagger_1.ApiTags)('providers'),
     (0, common_1.Controller)('providers'),
     __metadata("design:paramtypes", [providers_service_1.ProvidersService])
 ], ProvidersController);

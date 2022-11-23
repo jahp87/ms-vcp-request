@@ -3,23 +3,21 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity('providers')
 export class ProviderEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
-  @Column()
-  taxId: string;
+  @Column({ nullable: true })
+  company: string;
 
-  @Column()
-  names: string;
+  @Column({ nullable: true })
+  firstName: string;
 
-  @Column()
-  fatherLastname: string;
+  @Column({ nullable: true })
+  lastName: string;
 
-  @Column()
-  motherLastname: string;
-
-  @Column()
+  @Column({ nullable: true })
   businessName: string;
 
-  @Column()
+  @Column({ nullable: true })
   email: string;
+
 }

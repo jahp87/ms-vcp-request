@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
+import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { config } from './config';
+import { RequestsModule } from './requests/requests.module';
 import { ProvidersModule } from './providers/providers.module';
+import { MailModule } from './mail/mail.module';
 
 @Module({
   imports: [
@@ -25,7 +27,9 @@ import { ProvidersModule } from './providers/providers.module';
         synchronize: true,
       }),
     }),
+    RequestsModule,
     ProvidersModule,
+    MailModule,
   ],
   controllers: [AppController],
   providers: [AppService],

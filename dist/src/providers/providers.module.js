@@ -11,8 +11,8 @@ const common_1 = require("@nestjs/common");
 const providers_service_1 = require("./providers.service");
 const providers_controller_1 = require("./providers.controller");
 const provider_entity_1 = require("./entities/provider.entity");
-const provider_repository_1 = require("./repositories/provider.repository");
 const typeorm_1 = require("@nestjs/typeorm");
+const provider_repository_1 = require("./repositories/provider.repository");
 let ProvidersModule = class ProvidersModule {
 };
 ProvidersModule = __decorate([

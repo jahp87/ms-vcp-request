@@ -18,27 +18,23 @@ __decorate([
     __metadata("design:type", Number)
 ], ProviderEntity.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
-], ProviderEntity.prototype, "taxId", void 0);
+], ProviderEntity.prototype, "company", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
-], ProviderEntity.prototype, "names", void 0);
+], ProviderEntity.prototype, "firstName", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
-], ProviderEntity.prototype, "fatherLastname", void 0);
+], ProviderEntity.prototype, "lastName", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], ProviderEntity.prototype, "motherLastname", void 0);
-__decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
 ], ProviderEntity.prototype, "businessName", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ nullable: true }),
     __metadata("design:type", String)
 ], ProviderEntity.prototype, "email", void 0);
 ProviderEntity = __decorate([

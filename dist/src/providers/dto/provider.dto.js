@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProviderDto = void 0;
+exports.UpdateProviderDto = exports.ProviderDto = void 0;
 const swagger_1 = require("@nestjs/swagger");
 class ProviderDto {
 }
@@ -20,19 +20,15 @@ __decorate([
 __decorate([
     (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
-], ProviderDto.prototype, "taxId", void 0);
+], ProviderDto.prototype, "company", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
-], ProviderDto.prototype, "names", void 0);
+], ProviderDto.prototype, "firstName", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
-], ProviderDto.prototype, "fatherLastname", void 0);
-__decorate([
-    (0, swagger_1.ApiProperty)(),
-    __metadata("design:type", String)
-], ProviderDto.prototype, "motherLastname", void 0);
+], ProviderDto.prototype, "lastName", void 0);
 __decorate([
     (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
@@ -42,4 +38,7 @@ __decorate([
     __metadata("design:type", String)
 ], ProviderDto.prototype, "email", void 0);
 exports.ProviderDto = ProviderDto;
+class UpdateProviderDto extends (0, swagger_1.OmitType)(ProviderDto, ['id']) {
+}
+exports.UpdateProviderDto = UpdateProviderDto;
 //# sourceMappingURL=provider.dto.js.map

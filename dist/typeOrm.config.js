@@ -1,11 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const typeorm_1 = require("typeorm");
-const config_1 = require("@nestjs/config");
-const dotenv_1 = require("dotenv");
 const provider_entity_1 = require("./src/providers/entities/provider.entity");
-(0, dotenv_1.config)();
-const configService = new config_1.ConfigService();
+const typeorm_1 = require("typeorm");
+const request_entity_1 = require("./src/requests/entities/request.entity");
 exports.default = new typeorm_1.DataSource({
     type: 'postgres',
     host: 'localhost',
@@ -13,7 +10,7 @@ exports.default = new typeorm_1.DataSource({
     username: 'postgres',
     password: 'jahp',
     database: 'dbvcp',
-    entities: [provider_entity_1.ProviderEntity],
+    entities: [request_entity_1.RequestEntity, provider_entity_1.ProviderEntity],
     synchronize: true,
     migrations: ['./migrations/*.ts'],
 });
